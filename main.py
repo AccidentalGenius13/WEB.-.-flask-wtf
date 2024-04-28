@@ -21,5 +21,11 @@ def training(prof):
     return render_template('training.html', **param)
 
 
+@app.route('/list_prof/<list_type>')
+def list_prof(list_type):
+    param = {'title': 'Список профессий', 'type': list_type}
+    return render_template('professions.html', **param)
+
+
 if __name__ == '__main__':
     app.run()

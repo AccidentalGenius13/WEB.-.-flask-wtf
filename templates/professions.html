@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div>
+    <h2>Список профессий</h2>
+    {% set professions = ['инженер', 'исследователь', 'строитель', 'врач', 'пилот'] %}
+    {% if type == 'ol'%}
+        <ol>
+            {% for profession in professions %}
+                <li>{{ profession }}</li>
+            {% endfor %}
+        </ol>
+    {% elif type == 'ul' %}
+        <ul>
+            {% for profession in professions %}
+                <li>{{ profession }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+
+</div>
+{% endblock %}
